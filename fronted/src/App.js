@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/19303f9e03.js" crossorigin="anonymous"></script>
 
-  
-    <title>Zhort</title>
-</head>
-<body>
+function App() {
+  return (
     <div class="grid-container">
         <header class="row">
             <div>
@@ -25,7 +15,7 @@
              
             <div class="row center">
                 <div class="card">
-                    <a href="product.html"><img class="medium" src="./images/product-1.jpeg" alt="Product"></a>
+                    <a href="product.html"><img class="medium" src="./images/product-1.jpeg" alt="Product"/></a>
                     <div class="card-body">
                         <a href="product.html">
                             <h2>Chamarra Adidas </h2>
@@ -46,7 +36,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <a href="product.html"><img class="medium" src="./images/product-1.jpeg" alt="Product"></a>
+                    <a href="product.html"><img class="medium" src="./images/product-1.jpeg" alt="Product"/></a>
                     <div class="card-body">
                         <a href="product.html">
                             <h2>Chamarra Adidas </h2>
@@ -66,7 +56,7 @@
                 </div>
 
                 <div class="card">
-                    <a href="product.html"><img class="medium" src="./images/product-1.jpeg" alt="Product"></a>
+                    <a href="product.html"><img class="medium" src="./images/product-1.jpeg" alt="Product"/></a>
                     <div class="card-body">
                         <a href="product.html">
                             <h2>Chamarra Adidas </h2>
@@ -93,6 +83,7 @@
             All rights reserved
         </footer>
     </div>
-  
-</body>
-</html>
+  );
+}
+
+export default App;

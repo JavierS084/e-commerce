@@ -125,5 +125,6 @@ img.medium{
 }
 .rating span {
     color: #f0c040;
+    border-color: #f0c040   ;
     margin: .1rem;
 }
