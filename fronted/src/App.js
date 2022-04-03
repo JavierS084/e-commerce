@@ -8,7 +8,7 @@ function App() {
             </div>
             <div>
                 <a href="cart.html"><i className="fa fa-cart-plus"></i></a>
-                <a href="signin.html">Iniciar Sesi&oacute;n</a>
+                <a href="signin.html">Iniciarn Sesi&oacute;n</a>
             </div>
         </header>
         <main> 
