@@ -1,4 +1,4 @@
-
+import data from './data'
 function App() {
   return (
     <div className="grid-container">
@@ -14,27 +14,33 @@ function App() {
         <main> 
              
             <div className="row center">
-                <div className="card">
-                    <a href="product.html"><img className="medium" src="./images/product-1.jpeg" alt="Product"/></a>
-                    <div className="card-body">
-                        <a href="product.html">
-                            <h2>Chamarra Adidas </h2>
-                        </a>
-                        <div className="rating">
-                            <i className="las la-battery-three-quarters"></i>
-                            <span><i className="fa fa-star"></i> </span>
-                            <span><i className="fa fa-star"></i> </span> 
-                            <span><i className="fa fa-star"></i> </span>
-                            <span><i className="fa fa-star"></i> </span> 
-                            <span><i className="fa fa-star"></i> </span>
-                            
-                           
+                {data.products.map((product) =>(
+                        
+                        <div key={product._id} className="card">
+                            <a href={`/product/${product._id}`}>
+                                <img className="medium" src={product._id} alt="Product"/></a>
+                            <div className="card-body">
+                                <a href={`/product/${product._id}`}>
+                                    <h2>{product.name}</h2>
+                                </a>
+                                <div className="rating">
+                                    <i className="las la-battery-three-quarters"></i>
+                                    <span><i className="fa fa-star"></i> </span>
+                                    <span><i className="fa fa-star"></i> </span> 
+                                    <span><i className="fa fa-star"></i> </span>
+                                    <span><i className="fa fa-star"></i> </span> 
+                                    <span><i className="fa fa-star"></i> </span>
+                                    
+                                
+                                </div>
+                                <div className="price">
+                                    $90
+                                </div>
+                            </div>
                         </div>
-                        <div className="price">
-                            $90
-                        </div>
-                    </div>
-                </div>
+                    ))
+                }
+               
                
                 
             </div>     
