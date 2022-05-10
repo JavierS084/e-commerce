@@ -18,7 +18,7 @@ function App() {
                         
                         <div key={product._id} className="card">
                             <a href={`/product/${product._id}`}>
-                                <img className="medium" src={product._id} alt="Product"/></a>
+                                <img className="medium" src={product.image} alt="Product"/></a>
                             <div className="card-body">
                                 <a href={`/product/${product._id}`}>
                                     <h2>{product.name}</h2>
