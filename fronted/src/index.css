@@ -133,3 +133,6 @@ img.medium{
   border-color: #f0c040   ;
   margin: .1rem;
 }
+.rating span:last-child{
+  color:#2a2d30e7
+}
