@@ -8,8 +8,9 @@ const data = {
             price: 120,
             brand: 'Adidas',
             rating: 4.5,
-            numReviews: 10,
-            description: 'high quality product',
+            numReviews: 25,
+            countInStock: 10,
+            description: 'High Quality Product',
         },
         {
             _id: '2',
@@ -20,7 +21,8 @@ const data = {
             brand: 'Adidas',
             rating: 4.8,
             numReviews: 10,
-            description: 'high quality product',
+            countInStock: 6,
+            description: 'High Quality Product',
         },
         {
             _id: '3',
@@ -30,8 +32,9 @@ const data = {
             price: 100,
             brand: 'Adidas',
             rating: 4.0,
-            numReviews: 10,
-            description: 'high quality product',
+            numReviews: 14,
+            countInStock: 0,
+            description: 'High Quality Product',
         },
     ],
 }; 

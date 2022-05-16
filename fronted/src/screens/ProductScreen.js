@@ -15,15 +15,12 @@ export default function ProductScreen(props) {
         <div class="col-2">
           <img class="large" src={product.image} alt={product.name}/>
         </div>
+      
         <div className="col-1">
           <ul>
             <li>
-              <h1>{product.name}</h1>
+            <h1>{product.name}</h1>
             </li>
-          </ul>
-        </div>
-        <div className="col-1">
-          <ul>
             <li>
               <Rating
               rating={product.rating}

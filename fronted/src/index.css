@@ -66,6 +66,16 @@ a:hover{
   border-bottom: 1px solid rgb(255, 255, 255);
 }
 
+ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li{
+  margin-top: 1rem;
+}
+
 header a{
   color: #ffffff;
   padding: 2rem;
@@ -88,6 +98,12 @@ a.brand{
 .row.top{
   align-items: flex-end;
 
+}
+.col-1{
+  flex: 1 1 25rem;
+}
+.col-2{
+  flex: 2 1 50rem;
 }
 
 /**iMAGES*/
