@@ -12,8 +12,8 @@ export default function ProductScreen(props) {
     <div>
       <Link to="/">Volver a los Resultados</Link>
       <div class="row top">
-        <div class="col-2">
-          <img class="large" src={product.image} alt={product.name}/>
+        <div className="col-2">
+          <img className="large" src={product.image} alt={product.name}/>
         </div>
       
         <div className="col-1">
@@ -25,12 +25,13 @@ export default function ProductScreen(props) {
               <Rating
               rating={product.rating}
               numReviews={product.numReviews}
+              price={product.price}
               ></Rating>
             </li>
             <li>
-              Precio :  ${product.price}
+              Precio : ${product.price}
             </li>
-            <li>Description: <p>{product.description}</p></li>
+            <li>Descripcion: {product.description}</li>
           </ul>
 
         </div>
@@ -42,7 +43,7 @@ export default function ProductScreen(props) {
                   <div>Estado </div>
                   <div>
                     {product.countInStock > 0 ?(
-                      <span className="Success"> En Stock</span>
+                      <span className="success"> En Stock</span>
                     ) : (
                       <span className="error">No disponible</span>
                     )}
@@ -50,7 +51,7 @@ export default function ProductScreen(props) {
                 </div>
               </li>
               <li>
-                <button className="primary block">Agregar al Carrito</button>
+                <button className="primary-add">Agregar al Carrito</button>
               </li>
             </ul>
           </div>

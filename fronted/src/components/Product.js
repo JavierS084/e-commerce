@@ -19,7 +19,7 @@ export default function Product(props) {
         ></Rating>
 
         <div className="price">
-            $90
+            ${product.price}
         </div>
     </div>
 </div>
