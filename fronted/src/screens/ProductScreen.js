@@ -11,7 +11,7 @@ export default function ProductScreen(props) {
   return (
     <div>
       <Link to="/">Volver a los Resultados</Link>
-      <div class="row top">
+      <div className="row top">
         <div className="col-2">
           <img className="large" src={product.image} alt={product.name}/>
         </div>
@@ -29,7 +29,7 @@ export default function ProductScreen(props) {
               ></Rating>
             </li>
             <li>
-              Precio : ${product.price}
+              Precio : Gs. {product.price}
             </li>
             <li>Descripcion: {product.description}</li>
           </ul>
