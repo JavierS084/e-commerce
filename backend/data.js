@@ -17,7 +17,7 @@ const data = {
             name: 'Sueter Adidas',
             category: 'Sueter',
             image: '/images/product-2.jpeg',
-            price: 140,
+            price: 140.000,
             brand: 'Adidas',
             rating: 4.8,
             numReviews: 10,
