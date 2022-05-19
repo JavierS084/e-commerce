@@ -198,6 +198,31 @@ img.medium{
 .success{
   color: #20a020;
 }
-.error {
+.danger{
   color: #a02020;
+}
+.alert{
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+.alert-danger{
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: larger;
+  justify-content: center;
+  background-color: #d13535c2 ;
+}
+.alert-info{
+  color: #2020a0;
+  background-color: wheat;
+}
+.alert-error{
+  color: #a02020;
+  background-color:wheat;
 }
