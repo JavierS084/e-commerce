@@ -29,6 +29,23 @@ body{
 }       
 
 /**Header*/
+
+
+.badge{
+  position: relative;
+  bottom: 1rem;
+  background-color: #a02020;
+  color: #fff;
+  border-radius: 50%;
+  padding:.1rem .5rem;
+  font-size: 1.2rem;
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
 .primary-add{
   color: #ffffff;
   background-color: #22396b;
@@ -97,7 +114,9 @@ ul{
 li{
   margin-top: 1rem;
 }
-
+input,
+select,
+textarea,
 button{
   padding: 1rem;
   border-radius: 0.5rem;
@@ -110,6 +129,18 @@ button{
   -o-border-radius: 0.5rem;
 
 }
+button{
+  background-color: #c0c0c0;
+  cursor: pointer;
+}
+input:hover,
+select:hover,
+textarea:hover,
+
+button:hover{
+  border: .1rem solid #555555;
+}
+
 header a{
   color: #ffffff;
   padding: 2rem;
