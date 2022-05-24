@@ -25,7 +25,7 @@ export default function cartScreen(props) {
   };
   const checkoutHandler = () => {
     props.history.push('/signin?redirect=shipping');
-  }
+  };
   
     return (
      <div className="row top">
@@ -37,35 +37,43 @@ export default function cartScreen(props) {
             </MessageBox>
 
           ) : (
-          <ul>
+          <ul className="cart-Shopping">
             {
               cartItems.map((item) => (
                 <li key={item.product}>
                   <div className="row">
-                    <img src={item.image}
-                      alt={item.name}
-                      className="small">
-                    </img>
-                  </div>
-                  <div className="min-30">
-                    <Link to={`/product/${item.product}`}>{item.name}</Link>
-                  </div>
-                  <div>
-                    <select value={item.qty} onChange={e => dispatch(addToCart(item.product, Number(e.target.value)))}>
-                    {[...Array(item.countInStock).keys()].map( 
-                                (x) => (
-                                <option key={x + 1} value={x + 1}>
-                                  {x + 1}
-                                </option>
-                              )
-                              )}
-                    </select>
-                  </div>
-                  <div>
-                    ${item.price}
-                  </div>
-                  <div>
-                    <button type="button" onClick={() => removeFromCartHandler(item.product)}>Eliminar</button>
+                    <div>
+                      <img src={item.image}
+                        alt={item.name}
+                        className="small">
+                      </img>
+                    </div>
+
+                    <div className="min-30">
+                      <Link to={`/product/${item.product}`}>{item.name}</Link>
+                    </div>
+                    <div className="min-30">
+                      <select
+                       value={item.qty}
+                       onChange={(e) =>
+                        dispatch(
+                          addToCart(item.product,Number(e.target.value))
+                        )
+                      }>
+                      {[...Array(item.countInStock).keys()].map( (x) => (
+                                  <option key={x + 1} value={x + 1}>
+                                    {x + 1}
+                                  </option>
+                                )
+                                )}
+                      </select>
+                    </div>
+                    <div>
+                      ${item.price}
+                    </div>
+                    <div>
+                      <button type="button" onClick={() => removeFromCartHandler(item.product)}>Eliminar</button>
+                    </div>
                   </div>
                 </li>
               ))
@@ -85,7 +93,7 @@ export default function cartScreen(props) {
                  </h2>
                </li>
                <li>
-                 <button type="button" onClick={ checkoutHandler} className="primary block" disabled={cartItems.length === 0}>
+                 <button type="button" onClick={ checkoutHandler} className="primary-block" disabled={cartItems.length === 0}>
                   Proceed to Checkout
                  </button>
                  

@@ -35,7 +35,7 @@ export default function ProductScreen(props) {
           </div>
         
           <div className="col-1">
-            <ul>
+            <ul className="productScreen">
               <li>
                 <h1>{product.name}</h1>
               </li>
