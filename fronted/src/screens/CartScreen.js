@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from '../actions/cartActions';
+import { addToCart, removeFromCart } from '../actions/cartActions';
 import MessageBox from '../components/MessageBox';
 import { Link } from 'react-router-dom';
 
-export default function cartScreen(props) {
+export default function cartScreen(props) { 
   const productId = props.match.params.id;
   const qty = props.location.search
   ? Number(props.location.search.split('=')[1])
@@ -14,6 +14,7 @@ export default function cartScreen(props) {
   const { cartItems } = cart;
   const dispatch = useDispatch();
 
+ // const sizeChosen = useSelector((state) => state?.cart?.sizeChosen?.sizeChosen)
   useEffect(() => {
     if (productId){
       dispatch(addToCart(productId, qty));
@@ -22,6 +23,7 @@ export default function cartScreen(props) {
 
   const removeFromCartHandler = (id) => {
     // remove from cart 
+    dispatch(removeFromCart(id));
   };
   const checkoutHandler = () => {
     props.history.push('/signin?redirect=shipping');
@@ -69,7 +71,7 @@ export default function cartScreen(props) {
                       </select>
                     </div>
                     <div>
-                      ${item.price}
+                      Gs. {item.price}
                     </div>
                     <div>
                       <button type="button" onClick={() => removeFromCartHandler(item.product)}>Eliminar</button>
@@ -88,8 +90,8 @@ export default function cartScreen(props) {
              <ul>
                <li>
                  <h2>
-                   Subtotal ({cartItems.reduce((a,c) => a + c.qty, 0 )} items) : $
-                   {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
+                   Subtotal ({cartItems.reduce((a,c) => a + c.qty, 0 )} items) : Gs. 
+                   { cartItems.reduce((a, c) => a + c.price * c.qty, 0) }
                  </h2>
                </li>
                <li>
