@@ -29,6 +29,23 @@ body{
 }       
 
 /**Header*/
+
+
+.badge{
+  position: relative;
+  bottom: 1rem;
+  background-color: #a02020;
+  color: #fff;
+  border-radius: 50%;
+  padding:.1rem .5rem;
+  font-size: 1.2rem;
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
 .primary-add{
   color: #ffffff;
   background-color: #22396b;
@@ -93,11 +110,24 @@ ul{
   margin: 0;
   list-style: none;
 }
-
+ul.cart-Shopping{
+  position: relative;
+  left: 10rem;
+  padding: 2rem;
+  border-radius:.5rem;
+  border: 1px solid #c0c0c0;
+  max-width: 80%;
+  -webkit-border-radius:.5rem;
+  -moz-border-radius:.5rem;
+  -ms-border-radius:.5rem;
+  -o-border-radius:.5rem;
+}
 li{
   margin-top: 1rem;
 }
-
+input,
+select,
+textarea,
 button{
   padding: 1rem;
   border-radius: 0.5rem;
@@ -110,6 +140,18 @@ button{
   -o-border-radius: 0.5rem;
 
 }
+button{
+  background-color: #c0c0c0;
+  cursor: pointer;
+}
+input:hover,
+select:hover,
+textarea:hover,
+
+button:hover{
+  border: .1rem solid #555555;
+}
+
 header a{
   color: #ffffff;
   padding: 2rem;
@@ -139,7 +181,9 @@ a.brand{
 .col-2{
   flex: 2 1 50rem;
 }
-
+.min-30{
+  min-width: 30rem;
+}
 /**iMAGES*/
 
 img{
@@ -153,10 +197,18 @@ img.medium{
   max-width: 29rem;
   width: 100%;
 }
-.img.large{
-  width: 100%;
+img.large{
+  width: 80%;
+  height: 80%;
 }
-
+img.small{
+  max-width: 13rem;
+  width: 50%;
+}
+.imgCart{
+  max-width: 5rem;
+  width: 50%;
+}
 /**Card*/
 .card{
   border: .1rem #c0c0c0 solid;
@@ -225,4 +277,9 @@ img.medium{
 .alert-error{
   color: #a02020;
   background-color:wheat;
+}
+
+.productScreen{
+  position: relative;
+  padding: 2rem;
 }
